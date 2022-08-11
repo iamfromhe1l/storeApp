@@ -14,7 +14,8 @@ const User = require('./models/user')
 const varMiddleware = require('./middleware/variables')
 
 const app = express()
-
+require('dotenv').config();
+const MONGODB_URI = process.env.MONGODB_URI
 
 const store = new MongoStore({
   collection: 'sessions',
